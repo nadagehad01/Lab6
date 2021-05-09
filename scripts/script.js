@@ -6,6 +6,7 @@ window.logCheckpoints = true // set to true/false to add/remove checkpoint logs 
 // script.js
 
 document.addEventListener('DOMContentLoaded', () => {
+
   /* TODO:
    * 1. fetch json results from https://cse110lab6.herokuapp.com/entries
    * 2. for each entry, create and append a custom HTML element 
@@ -16,10 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
    * the current entry for each journal-entry element.
    */
 
-  let url = ""  // SET URL 
+  let url = "https://cse110lab6.herokuapp.com/entries" // SET URL 
 
   fetch(url)
-    .then( /* FILL IN RESPONSE HANDLING HERE */ )
+    .then(response => response.json())
     .then(entries => {
       entries.forEach((entry) => {
        
